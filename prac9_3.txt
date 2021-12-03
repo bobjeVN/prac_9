@@ -1,0 +1,8 @@
+def recursion(lst,item,left,right):
+    m = (right+left)//2
+    if(lst[m]==item):
+        return m
+    if(lst[m]<item):
+        return recursion(lst,item,m-1,right)
+    else:
+        return recursion(lst,item,left,m+1)

@@ -1,0 +1,20 @@
+def find(lst, x):
+    for y in range(0, len(lst)):
+        if lst[y] == x:
+            return y + 1
+        else:
+            return "net chisla"
+from random import randint
+lst = []
+k = 1
+m = int(input('введите количество чисел: '))
+while k <= m:
+    lst.append(randint(-10, 10))
+    k += 1
+lst.sort()
+print (lst)
+x = int(input('Какое число нужно найти: '))
+print(find(lst, x))
+import time 
+start_time = time.time()
+print("-- %s seconds ---" % (time.time() - start_time))
